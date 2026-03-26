@@ -64,9 +64,9 @@ const scheduleform =document.getElementbyId('scheduleform');
       const title=document.getelementbyId('title').value;
       const date=document.getelementbyId('date').value;
        const time=document.getelementbyId('time').value;
-      console.log("new event" ,title, date, time);
-      alert ("schedule added" +title);
-      showtab('home');
+      console.log("new event: " ,title, date, time);
+      alert ("schedule added: " +title);
+      showtab('new schedule');
       scheduleform.reset();
     });
       
