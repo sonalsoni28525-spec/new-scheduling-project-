@@ -48,22 +48,33 @@
     </div>
 
     <!-- New Schedule Tab -->
-    <div id="new" class="hidden">
-    
-      <form id="scheduleForm">
-        <label for="title">Event Title:</label>
-        <input type="text" id="title" required>
+    <div class="form-container">
+  <h2>Schedule Your Class</h2>
+  <form>
+    <label for="name">Full Name</label>
+    <input type="text" id="name" placeholder="Enter your name">
 
-<label for="date">Date:</label>
-        <input type="date" id="date" required>
+    <label for="email">Email</label>
+    <input type="email" id="email" placeholder="Enter your email">
 
-        <label for="time">Time:</label>
-        <input type="time" id="time" required>
+    <label for="date">Select Date</label>
+    <input type="date" id="date">
 
-        <button type="submit">Add Schedule</button>
-      </form>
-    </div>
-  </div>
+    <label for="time">Select Time</label>
+    <input type="time" id="time">
+
+    <label for="subject">Subject</label>
+    <select id="subject">
+      <option>Math</option>
+      <option>Science</option>
+      <option>History</option>
+      <option>English</option>
+    </select>
+
+    <button type="submit">Book Now</button>
+  </form>
+</div>
+
 
   <script>
     function showTab(tab) {
