@@ -23,16 +23,20 @@
         <li><a href="#">open schudling</a></li>
         <li><a href="#">saved schudled</a></li>
         <li><a href="#">rename title</a></li>
-      </ul>
-    </li>
     <li><a href="#">About</a></li>
     <li><a href="#">Contact</a></li>
+      </ul>    
   </ul>
 </nav>
 
   
     </nav>
   </header>
+  
+  function toggleMenu() {
+  document.querySelector(".menu").classList.toggle("active");
+}
+
 
   <div class="container">
 <!-- Home Tab -->
@@ -82,7 +86,8 @@ const scheduleform =document.getElementbyId('scheduleform');
       showtab('new schedule');
       scheduleform.reset();
     });
-      
+
+    
   </script>
 </body>
 </html>
