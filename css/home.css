@@ -1,11 +1,31 @@
-
-.hamburger {
-  font-size: 24px;
-  cursor: pointer;
-  display: none; /* hidden on desktop */
+ body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f4f4f4;
+    }
+    header {
+      background: #333;
+      color: #fff;
+      padding: 10px;
+    }
+   
+.navbar {
+  background: #2c3e50;
+  color: #fff;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+}
 
+.hamburger {
+  font-size: 26px;
+}
 .menu {
   list-style: none;
   display: flex;
@@ -17,53 +37,33 @@
 }
 
 .menu a {
-  color: white;
+  color: #fff;
   text-decoration: none;
+  padding: 8px;
+  display: block;
 }
 
+/* Submenu hidden by default */
 .submenu {
   display: none;
   position: absolute;
-  background: #444;
+  background: #34495e;
   list-style: none;
   padding: 10px;
   top: 100%;
   left: 0;
+  min-width: 150px;
+}
+
+.submenu li a {
+  padding: 6px 12px;
 }
 
 .menu li:hover .submenu {
   display: block; /* show on hover (desktop) */
 }
 
-
-    .container {
-      padding: 20px;
-    }
-
-    .hidden {
-      display: none;
-}
-    form {
-      background: #fff;
-      padding: 20px;
-      border-radius: 5px;
-    }
-    label {
-      display: block;
-      margin-top: 10px;
-    }
-    input, button {
-      margin-top: 5px;
-      padding: 8px;
-      width: 100%;
-    }
-    .schedule-list {
-      margin-top: 20px;
-      background: #fff;
-      padding: 15px;
-      border-radius: 5px;
-    }
-  
+/* Mobile view */
 @media (max-width: 768px) {
   .hamburger {
     display: block;
@@ -71,8 +71,23 @@
   .menu {
     display: none;
     flex-direction: column;
+    width: 100%;
+    background: #2c3e50;
   }
   .menu.active {
     display: flex;
+  }
+  .menu li {
+    border-top: 1px solid #3d566e;
+}
+  .submenu {
+    position: static;
+    background: #3d566e;
+  }
+  .menu li:hover .submenu {
+    display: none; /* disable hover on mobile */
+  }
+.menu li.open .submenu {
+    display: block; /* show submenu when clicked */
   }
 }
