@@ -63,12 +63,12 @@
     <label for="time">Select Time</label>
     <input type="time" id="time">
 
-    <label for="subject">Subject</label>
+    <label for="subject">title</label>
     <select id="subject">
-      <option>Math</option>
-      <option>Science</option>
-      <option>History</option>
-      <option>English</option>
+      <option>bussinesss meeting</option>
+      <option>confirm dates</option>
+      <option>time</option>
+      <option>product sales</option>
     </select>
 
     <button type="submit">Book Now</button>
@@ -76,21 +76,6 @@
 </div>
 
 
-  <script>
-    
-const scheduleform =document.getElementbyId('scheduleform');
-    scheduleform.addeventlistener('submit',function(event){
-      event.preventdefault();
-      const title=document.getelementbyId('title').value;
-      const date=document.getelementbyId('date').value;
-       const time=document.getelementbyId('time').value;
-      console.log("new event: " ,title, date, time);
-      alert ("schedule added: " +title);
-      showtab('new schedule');
-      scheduleform.reset();
-    });
-
-    
-  </script>
+  
 </body>
 </html>
