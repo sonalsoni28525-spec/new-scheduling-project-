@@ -49,7 +49,7 @@
 
     <!-- New Schedule Tab -->
     <div id="new" class="hidden">
-      <h2>Create a New Schedule</h2>
+    
       <form id="scheduleForm">
         <label for="title">Event Title:</label>
         <input type="text" id="title" required>
@@ -70,8 +70,8 @@
       document.getElementById('home').classList.add('hidden');
       document.getElementById('new').classList.add('hidden');
       document.getElementById('tab').classList.remove('hidden');
-      <button onclick="showTab ('new') ">NEW SCHEDULE</button>
-    <button onclick="showTab('home')">HOME</button>  
+      <button onclick="showTab ('new') ">dashboard</button>
+    <button onclick="showTab('home')">classes</button>  
     }
 const scheduleform =document.getElementbyId('scheduleform');
     scheduleform.addeventlistener('submit',function(event){
